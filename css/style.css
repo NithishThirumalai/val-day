@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(135deg, #ffd6ec, #ffeaf5);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    width: 95%;
+    max-width: 420px;
+}
+
+h1, h2, p {
+    color: #ff4d94;
+}
+
+button {
+    background: #ff99cc;
+    border: none;
+    padding: 12px 20px;
+    margin: 8px;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff66a3;
+    transform: scale(1.08);
+}
+
+.block-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.block {
+    background: white;
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.block:hover {
+    transform: scale(1.05);
+}
+
+.heart {
+    position: fixed;
+    font-size: 18px;
+    animation: floatUp 6s linear infinite;
+    color: #ff66a3;
+}
+
+@keyframes floatUp {
+    0% {transform: translateY(100vh); opacity: 0;}
+    20% {opacity: 1;}
+    100% {transform: translateY(-10vh); opacity: 0;}
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 182, 193, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal img {
+    width: 90%;
+    max-width: 300px;
+    border-radius: 15px;
+}
+
+.close {
+    margin-top: 15px;
+    background: #ff4d94;
+    color: white;
+}
